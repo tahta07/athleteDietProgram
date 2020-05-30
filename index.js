@@ -1,3 +1,7 @@
+function printFollows(name){
+    console.log(`${name}'i ${name.follows} takip ediyor `)
+}
+
 class User {
     constructor(name, age, mail) {
         this.name = name
@@ -11,13 +15,16 @@ class User {
     followUser(user) {
         user.followers.push(this)
         this.follows.push(user)
-        console.log(`${this.name}: ${user.name} adlı kullanıcıyı takip ediliyor. listesinde takip ettiği ${this.follows.length} kişi bulunmaktadır.`)
+        // console.log(`${this.name}: ${user.name} adlı kullanıcıyı takip ediliyor. listesinde takip ettiği ${this.follows.length} kişi bulunmaktadır.`)
     }
     postRecipie(recipe) {
         this.recipe.push(recipe)
     }
     createDailyProgram(dailyPrograms) {
         this.dailyPrograms.push(dailyPrograms)
+    }
+    printDailyPrograms(){
+        printFollows(this.name)
     }
 }
 
@@ -102,4 +109,6 @@ naciye.createDailyProgram(diyet1)
 // console.log(yumurta)
 // yunus.postRecipie(sutluYumurta)
 // console.log(sabah)
-console.log(yunus)
+// console.log(yunus)
+yunus.name
+yunus.printDailyPrograms()
