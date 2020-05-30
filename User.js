@@ -1,7 +1,7 @@
 const colors = require('colors')
 
 const listFollowers =  (name) =>  {
-    name.follows.forEach((element) => {console.log(`${colors.red(name.name)} ${colors.yellow(element.name)} seni takip ediyor`);
+    name.follows.forEach((element) => {console.log(`${colors.red(name.name)} ${colors.yellow(element.name)}  following you `);
     });
   }
 
