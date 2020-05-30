@@ -1,0 +1,89 @@
+@startuml "Class Diagram"
+
+class User <<Entity>> {
+  + name: String
+  + email: String
+  + locations: Location[]
+  + followers : Array 
+  + follows : Array
+  + postRecipie()
+  + followUser()
+  +createDailyProgram():DailyProgram
+
+}
+
+
+Class Measurement {
+  + age
+  + weight
+  + height
+  + sex 
+  + activity 
+  ..
+  + neckSize
+  + waistSize
+  + chestSize
+  }
+ 
+
+class BMI <<ValueObject>> {
+  + type: String
+  + value: Number
+  + unit: String
+
+}
+
+class UserDestination<<ValueObject>> {
+  + totalCalories
+  + totalMacros
+}
+Class DailyProgram{
+  + name: String
+  + meal : [Meal] 
+  + addMeal()
+  
+}
+
+Class WeeklyProgram{
+  +name: String
+  +dailyProgram: [DailyProgram]
+  +addDailyProgram()
+}
+Class Meal{
+  + name: String
+  + ingredients: [Ingredients]
+  + addIngredients()
+  + addRecipie()
+
+}
+Class Ingredients{
+  + name:String
+  + calori: Number  
+  + portein :Number
+  + carb : Number
+  + fats : Number
+
+}
+class Recipies {
+  + name: String
+  + totalCalories:Number
+  + ingredients : [Ingredients]
+  + addIngredients()
+}
+
+
+
+User *--> " 1 " Measurement
+User *--> " 0..n " WeeklyProgram
+User *--> " 1..n " DailyProgram
+DailyProgram *--> " 1..n " Meal
+Meal o--> " 1..n "Ingredients
+Meal o--> " 0..n " Recipies
+Measurement *--> " 1 " BMI
+BMI *--> " 1..3 " UserDestination
+DailyProgram " 1..7 " o--> WeeklyProgram
+
+
+
+
+@enduml
