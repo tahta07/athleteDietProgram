@@ -1,4 +1,9 @@
-const listFollowers = require('./function') 
+const colors = require('colors')
+
+const listFollowers =  (name) =>  {
+    name.follows.forEach((element) => {console.log(`${colors.red(name.name)} ${colors.yellow(element.name)} seni takip ediyor`);
+    });
+  }
 
 class User {
     constructor(name, age, mail) {
@@ -24,6 +29,6 @@ class User {
     listFollower(){
         listFollowers(this)
     }
-  
+
 }
 module.exports = User

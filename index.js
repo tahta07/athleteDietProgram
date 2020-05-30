@@ -3,7 +3,8 @@ const DailyPrograms = require ('./dailyPrograms')
 const Recipe = require ('./recipe')
 const Meal = require ('./meal')
 const Ingredients = require ('./ingredients')
-const colors = require('colors')
+
+
 
 const yumurta = new Ingredients('Yumurta', 100, 10, 5, 3)
 const sut = new Ingredients('Süt', 125, 2, 12, 20)
