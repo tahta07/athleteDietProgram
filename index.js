@@ -1,5 +1,7 @@
-function printFollows(name){
-    console.log(`${name}'i ${name.follows} takip ediyor `)
+function listFollowers(name){
+    name.follows.forEach(element => {
+        console.log(`${name.name} ${element.name} seni takip ediyor `)
+    });
 }
 
 class User {
@@ -23,9 +25,10 @@ class User {
     createDailyProgram(dailyPrograms) {
         this.dailyPrograms.push(dailyPrograms)
     }
-    printDailyPrograms(){
-        printFollows(this.name)
+    listFollower(){
+        listFollowers(this)
     }
+  
 }
 
 class Ingredients {
@@ -110,5 +113,6 @@ naciye.createDailyProgram(diyet1)
 // yunus.postRecipie(sutluYumurta)
 // console.log(sabah)
 // console.log(yunus)
-yunus.name
-yunus.printDailyPrograms()
+yunus.listFollower()
+naciye.listFollower()
+// listFollowers(yunus)
