@@ -1,19 +1,23 @@
 {
   "name": "athletedietprogram",
   "version": "1.0.0",
-  "description": "Sporcu Beslenme Programı Kullanıcı Kayıt olur bu sırada \"e-mail\",\"isim\" ve \"lokasyon\" girer (lokasyon ileride çevredeki marketlere göre yemek seçimi yapmak için kullanılabilir)",
+  "description": "In-Class examples week-2",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tahta07/athleteDietProgram.git"
   },
-  "author": "",
+  "author": "Yunus Erol",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tahta07/athleteDietProgram/issues"
   },
-  "homepage": "https://github.com/tahta07/athleteDietProgram#readme"
+  "homepage": "https://github.com/tahta07/athleteDietProgram#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }

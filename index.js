@@ -1,15 +1,15 @@
-const User = require ('./User')
+const User = require ('./user')
 const DailyPrograms = require ('./dailyPrograms')
 const Recipe = require ('./recipe')
 const Meal = require ('./meal')
 const Ingredients = require ('./ingredients')
+const colors = require('colors')
 
 const yumurta = new Ingredients('Yumurta', 100, 10, 5, 3)
 const sut = new Ingredients('Süt', 125, 2, 12, 20)
 const sabah = new Meal('Sabah')
 const sutluYumurta = new Recipe('Sütlü Yumurta')
 const diyet1 = new DailyPrograms('1.Hafta')
-
 
 sutluYumurta.addIngredients(sut)
 sutluYumurta.addIngredients(yumurta)
